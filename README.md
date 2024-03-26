@@ -1,2 +1,2 @@
-# local_es_cloud_resume
- local_repo_for_cloud_resume_web
+# es_cloud_resume
+ repo_for_cloud_resume_web
