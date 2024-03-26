@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(244 244 245);
+    color: rgb(24 24 27);
+}
+
+.dark-mode {
+    background-color: rgb(24 24 27);
+    color: rgb(244 244 245);
+}
