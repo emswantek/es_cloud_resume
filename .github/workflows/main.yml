@@ -12,7 +12,7 @@ jobs:
     - uses: azure/login@v1
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-
+    - run: cd cloudresweb
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
