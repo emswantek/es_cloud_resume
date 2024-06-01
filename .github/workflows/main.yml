@@ -3,7 +3,9 @@ name: Blob storage website CI
 on:
     push:
         paths:
-         - 'cloudresweb/**'
+         - 'cloudresweb/index.html'
+         - 'cloudresweb/scripts/**'
+         - 'cloudresweb/styles/**'
 
 jobs:
   build:
