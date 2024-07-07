@@ -3,6 +3,8 @@ function toggledark() {
     element.classList.toggle("dark-mode");
 }
 
+document.getElementById("pagestate").addEventListener("load", pagestate);
+
 function pagestate() {
  document.getElementById("pagestate").innerHTML = document.readyState;
 }
