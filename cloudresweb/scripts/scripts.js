@@ -4,5 +4,5 @@ function toggledark() {
 }
 
 function pagestate() {
- document.getElementById("pagestate").innerHTML = document.readyState;;
+ document.getElementById("pagestate").innerHTML = document.readyState();
 }
