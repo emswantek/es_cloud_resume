@@ -4,8 +4,14 @@ function toggledark() {
 }
 
 // Alternative to load event
+/*
 document.onreadystatechange = () => {
   if (document.readyState === "complete") {
     document.getElementById("pagestate").innerHTML = document.readyState;
   }
 };
+*/
+
+window.addEventListener("load", (event) => {
+  console.log("page is fully loaded");
+});
