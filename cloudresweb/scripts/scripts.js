@@ -3,6 +3,16 @@ function toggledark() {
     element.classList.toggle("dark-mode");
 }
 
+function totalvisitors() {
+  getvisitors();
+  document.getElementById("vcount").innerHTML =totalvisitors();
+
+}
+function getvisitors() {
+  const triggerurl = "https://cloudresumepython1.azurewebsites.net";
+}
+
+
 // Alternative to load event
 /*
 document.onreadystatechange = () => {
@@ -14,7 +24,5 @@ document.onreadystatechange = () => {
 
 window.addEventListener("load", (event) => {
   console.log("page is fully loaded");
-  const myBlob = new Blob();
-  const myOptions = { status: 200, statusText: "TriggerFunction" };
-  const myResponse = new Response(myBlob, myOptions);
+
 });
