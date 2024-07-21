@@ -14,4 +14,7 @@ document.onreadystatechange = () => {
 
 window.addEventListener("load", (event) => {
   console.log("page is fully loaded");
+  const myBlob = new Blob();
+  const myOptions = { status: 200, statusText: "TriggerFunction" };
+  const myResponse = new Response(myBlob, myOptions);
 });
