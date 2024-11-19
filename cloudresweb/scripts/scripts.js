@@ -2,16 +2,17 @@ function toggledark() {
     var element = document.body;
     element.classList.toggle("dark-mode");
 }
-
+/*
 function totalvisitors() {
   getvisitors();
   document.getElementById("vcount").innerHTML =totalvisitors();
-
+*/
+/*
 }
 function getvisitors() {
   const triggerurl = "https://cloudresumepython1.azurewebsites.net";
 }
-
+*/
 
 // Alternative to load event
 /*
