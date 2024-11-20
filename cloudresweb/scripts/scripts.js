@@ -35,5 +35,5 @@ async function fetchcount() {
   if (!response.ok) {
     throw new Error('Response status: ${response.status}');
   }
-  document.getElementById('vcount').innerHTML = response;
+  document.getElementById('vcount').innerHTML = response.body;
 }
