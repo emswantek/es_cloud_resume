@@ -27,12 +27,11 @@ window.addEventListener("load", (event) => {
   console.log("page is fully loaded");
 });
 */
-async function vcount()
+async function vcount(){
  const url = "https://eswebfunctions01.azurewebsites.net/api/http_trigger3?";
- try {
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error('Response status: ${response.status}');    
   }
   document.getElementById('vcount').innerHTML = response;
- }
+}
