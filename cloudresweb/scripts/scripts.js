@@ -38,7 +38,7 @@ window.addEventListener("load", (event) => {
   document.getElementById('vcount').innerHTML = response.body;
 }*/
 
-function fetchcount() {
+/*function fetchcount() {
   //const url = "https://eswebfunctions01.azurewebsites.net/api/http_trigger3?";
   // const response = await fetch(url);
   var response = fetch("https://eswebfunctions01.azurewebsites.net/api/http_trigger3?").then(response => response.json())
@@ -47,3 +47,30 @@ function fetchcount() {
   }
   document.getElementById('vcount').innerHTML = json.stringify(response);
 }
+*/
+
+async function fetchcount() {
+  try {
+    const response = await fetch(
+      'https://jsonplaceholder.typicode.com/users',
+    );
+
+    if (!response.ok) {
+      throw new Error(`Error! status: ${response.status}`);
+    }
+
+    var jsondata = await response.json();
+
+    return jsondata;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+fetchcount().then(data => {
+  console.log(jsondata);
+
+  var vcount = document.getElementById('vcount');
+
+  vcount.innerHTML = JSON.stringify(Count);
+});
