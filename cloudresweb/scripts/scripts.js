@@ -1,6 +1,6 @@
 function toggledark() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+  var element = document.body;
+  element.classList.toggle("dark-mode");
 }
 /*
 function totalvisitors() {
@@ -28,11 +28,11 @@ window.addEventListener("load", (event) => {
 });
 */
 async function fetchcount() {
- //const url = "https://eswebfunctions01.azurewebsites.net/api/http_trigger3?";
- // const response = await fetch(url);
- const response = await fetch("https://eswebfunctions01.azurewebsites.net/api/http_trigger3?");
+  //const url = "https://eswebfunctions01.azurewebsites.net/api/http_trigger3?";
+  // const response = await fetch(url);
+  var response = await fetch("https://eswebfunctions01.azurewebsites.net/api/http_trigger3?");
   if (!response.ok) {
-    throw new Error('Response status: ${response.status}');    
+    throw new Error('Response status: ${response.status}');
   }
   document.getElementById('vcount').innerHTML = response;
 }
