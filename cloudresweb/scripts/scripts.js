@@ -28,10 +28,20 @@ window.addEventListener("load", (event) => {
   fetchcount()
 });
 
-async function fetchcount() {
+/*async function fetchcount() {
   //const url = "https://eswebfunctions01.azurewebsites.net/api/http_trigger3?";
   // const response = await fetch(url);
   var response = await fetch("https://eswebfunctions01.azurewebsites.net/api/http_trigger3?").then(response => response.json())
+  if (!response.ok) {
+    throw new Error('Response status: ${response.status}');
+  }
+  document.getElementById('vcount').innerHTML = response.body;
+}*/
+
+function fetchcount() {
+  //const url = "https://eswebfunctions01.azurewebsites.net/api/http_trigger3?";
+  // const response = await fetch(url);
+  var response = fetch("https://eswebfunctions01.azurewebsites.net/api/http_trigger3?").then(response => response.json())
   if (!response.ok) {
     throw new Error('Response status: ${response.status}');
   }
