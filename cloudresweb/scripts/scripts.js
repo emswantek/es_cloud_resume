@@ -22,11 +22,12 @@ document.onreadystatechange = () => {
   }
 };
 */
-/*
+
 window.addEventListener("load", (event) => {
   console.log("page is fully loaded");
+  fetchcount()
 });
-*/
+
 async function fetchcount() {
   //const url = "https://eswebfunctions01.azurewebsites.net/api/http_trigger3?";
   // const response = await fetch(url);
