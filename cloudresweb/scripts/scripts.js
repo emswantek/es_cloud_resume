@@ -25,7 +25,14 @@ document.onreadystatechange = () => {
 
 window.addEventListener("load", (event) => {
   console.log("page is fully loaded");
-  fetchcount()
+  fetchcount().then(data => {
+  console.log(jsondata);
+
+  var vcount = document.getElementById('vcount');
+
+  //vcount.innerHTML = JSON.stringify(jsondata);
+  vcount.innerHTML = jsondata.count //.toString()
+});
 });
 
 /*async function fetchcount() {
@@ -51,9 +58,7 @@ window.addEventListener("load", (event) => {
 
 async function fetchcount() {
   try {
-    const response = await fetch(
-      'https://jsonplaceholder.typicode.com/users',
-    );
+    const response = await fetch("https://eswebfunctions01.azurewebsites.net/api/http_trigger3?");
 
     if (!response.ok) {
       throw new Error(`Error! status: ${response.status}`);
@@ -67,10 +72,3 @@ async function fetchcount() {
   }
 }
 
-fetchcount().then(data => {
-  console.log(jsondata);
-
-  var vcount = document.getElementById('vcount');
-
-  vcount.innerHTML = JSON.stringify(Count);
-});
