@@ -27,9 +27,10 @@ window.addEventListener("load", (event) => {
   console.log("page is fully loaded");
 });
 */
-async function vcount(){
- const url = "https://eswebfunctions01.azurewebsites.net/api/http_trigger3?";
-  const response = await fetch(url);
+async function fetchcount() {
+ //const url = "https://eswebfunctions01.azurewebsites.net/api/http_trigger3?";
+ // const response = await fetch(url);
+ const response = await fetch("https://eswebfunctions01.azurewebsites.net/api/http_trigger3?");
   if (!response.ok) {
     throw new Error('Response status: ${response.status}');    
   }
