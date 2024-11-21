@@ -15,7 +15,7 @@ async function fetchcount() {
 
     jsondata = json.parse(response.body);
 
-    vcount.innerHTML = jsondata.count
+    vcount.innerHTML = jsondata
   } catch (error) {
     console.log(error);
   }
