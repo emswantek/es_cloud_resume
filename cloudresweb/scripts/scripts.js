@@ -4,6 +4,10 @@ function toggleDarkMode() {
     body.classList.toggle("dark-mode");
 }
 
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    toggleDarkMode();
+}
+
 async function getVisitorCount() {
     try {
         let visitorCount = document.getElementById('visitorCount')
