@@ -1,23 +1,23 @@
-function toggledark() {
-  var element = document.body;
-  element.classList.toggle("dark-mode");
+function toggleDarkMode() {
+    let body = document.body;
+
+    body.classList.toggle("dark-mode");
 }
 
-async function fetchcount() {
-  try {
-    var vcount = document.getElementById('vcount');
-    var jsondata
-    var response = await fetch("https://eswebfunctions01.azurewebsites.net/api/http_trigger3?");
+async function getVisitorCount() {
+    try {
+        let visitorCount = document.getElementById('visitorCount')
+        let response = await fetch("https://eswebfunctions01.azurewebsites.net/api/http_trigger3?")
 
-    if (!response.ok) {
-      throw new Error(`Error! status: ${response.status}`);
+        if (response.ok) {
+            let jsonData = await response.json()
+
+            visitorCount.innerHTML = jsonData.count
+        } else {
+            console.error(`Error! Status: ${response.status}`)
+        }
+    } catch (error) {
+        console.error(error);
     }
-
-    jsondata = await response.json()
-
-    vcount.innerHTML = jsondata.count
-  } catch (error) {
-    console.log(error);
-  }
 }
 
