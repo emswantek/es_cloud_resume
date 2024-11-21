@@ -31,7 +31,7 @@ window.addEventListener("load", (event) => {
   var vcount = document.getElementById('vcount');
 
   //vcount.innerHTML = JSON.stringify(jsondata);
-  vcount.innerHTML = jsondata.count //.toString()
+  vcount.innerHTML = (jsondata.count) //.toString()
 });
 });
 
@@ -58,13 +58,14 @@ window.addEventListener("load", (event) => {
 
 async function fetchcount() {
   try {
-    const response = await fetch("https://eswebfunctions01.azurewebsites.net/api/http_trigger3?");
+    var response = await fetch("https://eswebfunctions01.azurewebsites.net/api/http_trigger3?");
 
     if (!response.ok) {
       throw new Error(`Error! status: ${response.status}`);
     }
 
-    var jsondata = await response.json();
+    //var jsondata = await response.json();
+    var jsondata = await json.parse(response);
 
     return jsondata;
   } catch (error) {
