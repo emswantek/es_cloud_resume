@@ -13,7 +13,7 @@ async function fetchcount() {
       throw new Error(`Error! status: ${response.status}`);
     }
 
-    jsondata = json.parse(response.body);
+    jsondata = json.parse(response);
 
     vcount.innerHTML = jsondata.Count
   } catch (error) {
