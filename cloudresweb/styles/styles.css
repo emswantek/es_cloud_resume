@@ -1,9 +1,14 @@
+:root {
+    --color-light: rgb(244, 244, 245);
+    --color-dark: rgb(24, 24, 27);
+}
+
 body {
-    background-color: rgb(244 244 245);
-    color: rgb(24 24 27);
+    background-color: var(--color-light);
+    color: var(--color-dark);
 }
 
 .dark-mode {
-    background-color: rgb(24 24 27);
-    color: rgb(244 244 245);
+    background-color: var(--color-dark);
+    color: var(--color-light);
 }
