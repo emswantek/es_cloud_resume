@@ -1,19 +1,25 @@
 function toggleDarkMode() {
-    const body = document.body;
-    const darkModeButton = document.getElementById('darkModeButton');
+    const primaryClass = 'mdl-color--primary';
+    const primaryDarkClass = 'mdl-color--primary-dark';
+    const primaryTextClass = 'mdl-color-text--primary-contrast';
+    const primaryTextDarkClass = 'mdl-color-text--primary-dark-contrast';
 
-    const colorClass = 'mdl-button--colored';
-    const accentClass = 'mdl-button--accent';
+    document.body.classList.toggle('dark-mode');
 
-    body.classList.toggle('dark-mode');
+    const elementsToMDLToggle = [
+        document.getElementById('darkModeButton'),
+        document.getElementById('visitorCount'),
+        // Add other elements here
+    ];
 
-    if (darkModeButton.classList.contains(colorClass)) {
-        darkModeButton.classList.remove(colorClass);
-        darkModeButton.classList.add(accentClass);
-    } else {
-        darkModeButton.classList.remove(accentClass);
-        darkModeButton.classList.add(colorClass);
+    function toggleMDLClasses(element) {
+        element.classList.toggle(primaryDarkClass);
+        element.classList.toggle(primaryClass);
+        element.classList.toggle(primaryTextDarkClass);
+        element.classList.toggle(primaryTextClass);
     }
+
+    elementsToMDLToggle.forEach(element => toggleMDLClasses(element));
 }
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
