@@ -6,11 +6,7 @@ function toggleDarkMode() {
 
     document.body.classList.toggle('dark-mode');
 
-    const elementsToMDLToggle = [
-        document.getElementById('darkModeButton'),
-        document.getElementById('visitorCount'),
-        // Add other elements here
-    ];
+    const elementsToMDLToggle = document.querySelectorAll(`.${primaryClass}, .${primaryDarkClass}, .${primaryTextClass}, .${primaryTextDarkClass}`);
 
     function toggleMDLClasses(element) {
         element.classList.toggle(primaryDarkClass);
