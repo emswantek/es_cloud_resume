@@ -11,6 +11,14 @@ body {
     overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    /*margin-bottom: 20px;*/
+}
+
+p {
+    margin-bottom: 10px;
+}
+
 .dark-mode {
     background-color: var(--color-dark);
     color: var(--color-light);
@@ -32,13 +40,4 @@ body {
 .mdl-spinner,
 .mdl-chip {
     position: absolute;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-p {
-    margin-bottom: 10px;
 }
