@@ -54,13 +54,7 @@ p {
     margin: 0 10px;
 }
 
-
-.panel-heading {
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-.panel-content {
+#expired-cert-content {
     display: none;
     padding: 15px;
 }

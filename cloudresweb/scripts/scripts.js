@@ -59,8 +59,8 @@ function setVisitorCount(count) {
     }
 }
 
-function togglePanelContent() {
-    const content = document.querySelector('.panel-content');
+function togglePanelContent(selector) {
+    const content = document.querySelector(selector);
     if (content.style.display === 'none' || content.style.display === '') {
         content.style.display = 'block';
     } else {
