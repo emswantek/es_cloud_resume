@@ -5,6 +5,7 @@ function toggleDarkMode() {
     const primaryTextDarkClass = 'mdl-color-text--primary-dark-contrast';
 
     document.body.classList.toggle('dark-mode');
+    document.querySelectorAll('li').forEach(element => element.classList.toggle('dark-mode'));
 
     const elementsToMDLToggle = document.querySelectorAll(`.${primaryClass}, .${primaryDarkClass}, .${primaryTextClass}, .${primaryTextDarkClass}`);
 

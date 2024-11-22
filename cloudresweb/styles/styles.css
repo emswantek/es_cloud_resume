@@ -41,3 +41,15 @@ p {
 .mdl-chip {
     position: absolute;
 }
+
+.mdl-list {
+    padding-left: 40px;
+}
+
+.spaced-text {
+    padding: 10px;
+}
+
+.spaced-text span {
+    margin: 0 10px;
+}
