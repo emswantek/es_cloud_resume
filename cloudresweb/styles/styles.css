@@ -18,8 +18,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Adjust as needed */
-    height: 40px; /* Adjust as needed */
+    width: 100%;
+    height: 40px;
+}
+
+#visitorBadge {
+    width: auto;
 }
 
 .mdl-spinner,
