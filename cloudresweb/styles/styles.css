@@ -24,7 +24,7 @@ p {
     color: var(--color-light);
 }
 
-.visitor-container {
+.visitor-container, .panel {
     position: relative;
     display: flex;
     justify-content: center;
@@ -52,4 +52,15 @@ p {
 
 .spaced-text span {
     margin: 0 10px;
+}
+
+
+.panel-heading {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.panel-content {
+    display: none;
+    padding: 15px;
 }

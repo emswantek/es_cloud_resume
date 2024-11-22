@@ -58,3 +58,12 @@ function setVisitorCount(count) {
         visitorCount.style.fontSize = "4px"; // pls don't
     }
 }
+
+function togglePanelContent() {
+    const content = document.querySelector('.panel-content');
+    if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+    } else {
+        content.style.display = 'none';
+    }
+}
