@@ -12,3 +12,17 @@ body {
     background-color: var(--color-dark);
     color: var(--color-light);
 }
+
+.visitor-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+}
+
+.mdl-spinner,
+.mdl-chip {
+    position: absolute;
+}
