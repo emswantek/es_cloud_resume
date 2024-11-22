@@ -1,7 +1,19 @@
 function toggleDarkMode() {
     const body = document.body;
+    const darkModeButton = document.getElementById('darkModeButton');
 
-    body.classList.toggle("dark-mode");
+    const colorClass = 'mdl-button--colored';
+    const accentClass = 'mdl-button--accent';
+
+    body.classList.toggle('dark-mode');
+
+    if (darkModeButton.classList.contains(colorClass)) {
+        darkModeButton.classList.remove(colorClass);
+        darkModeButton.classList.add(accentClass);
+    } else {
+        darkModeButton.classList.remove(accentClass);
+        darkModeButton.classList.add(colorClass);
+    }
 }
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
