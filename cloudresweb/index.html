@@ -14,11 +14,10 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
-<!-- onload="getVisitorCount()" -->
-<body class="mdl-typography--body-1" onload="getVisitorCount()">
+<body class="mdl-typography--body-1">
 
 <header>
-    <button onclick="toggleDarkMode()" id="dark-mode-toggle"
+    <button id="dark-mode-toggle"
             class="mdl-button mdl-js-button mdl-button--raised mdl-color--primary mdl-color-text--primary-contrast">
         Switch to Dark Mode
     </button>
@@ -134,8 +133,7 @@
         </p>
 
         <div id="expired-cert-container">
-            <button onclick="togglePanelContent('#expired-cert-content', '#expired-cert-toggle')"
-                    id="expired-cert-toggle"
+            <button id="expired-cert-toggle"
                     class="mdl-button mdl-js-button mdl-button--raised mdl-color--primary mdl-color-text--primary-contrast">
                 Show Expired Certifications
             </button>

@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", getVisitorCount);
+document.getElementById("dark-mode-toggle").addEventListener("click", toggleDarkMode);
+document.getElementById("expired-cert-toggle").addEventListener("click", () => {
+    togglePanelContent('#expired-cert-content', '#expired-cert-toggle');
+});
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    toggleDarkMode();
+}
+
 function toggleDarkMode() {
     const primaryClass = 'mdl-color--primary';
     const primaryDarkClass = 'mdl-color--primary-dark';
@@ -30,10 +40,6 @@ function toggleDarkMode() {
     }
 
     elementsToMDLToggle.forEach(element => toggleMDLClasses(element));
-}
-
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    toggleDarkMode();
 }
 
 async function getVisitorCount() {
