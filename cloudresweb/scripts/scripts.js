@@ -7,6 +7,14 @@ function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
     document.querySelectorAll('li').forEach(element => element.classList.toggle('dark-mode'));
 
+    const toggleButton = document.getElementById('dark-mode-toggle');
+
+    if (toggleButton.textContent === 'Switch to Light Mode') {
+        toggleButton.textContent = 'Switch to Dark Mode';
+    } else {
+        toggleButton.textContent = 'Switch to Light Mode';
+    }
+
     const elementsToMDLToggle = document.querySelectorAll(`.${primaryClass}, .${primaryDarkClass}, .${primaryTextClass}, .${primaryTextDarkClass}`);
 
     function toggleMDLClasses(element) {
@@ -59,11 +67,20 @@ function setVisitorCount(count) {
     }
 }
 
-function togglePanelContent(selector) {
-    const content = document.querySelector(selector);
+function togglePanelContent(contentSelector, buttonSelector) {
+    const content = document.querySelector(contentSelector);
+    const button = document.querySelector(buttonSelector);
+
+    let buttonText = button.textContent;
+
     if (content.style.display === 'none' || content.style.display === '') {
         content.style.display = 'block';
+        buttonText = buttonText.replace('Show', 'Hide');
     } else {
         content.style.display = 'none';
+        buttonText = buttonText.replace('Hide', 'Show');
+
     }
+
+    button.textContent = buttonText;
 }

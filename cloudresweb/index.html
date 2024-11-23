@@ -21,8 +21,9 @@
 
 <header>
     <button onclick="toggleDarkMode()"
+            id="dark-mode-toggle"
             class="mdl-button mdl-js-button mdl-button--raised mdl-color--primary mdl-color-text--primary-contrast">
-        Toggle dark mode
+        Switch to Dark Mode
     </button>
 
     <div class="visitor-container">
@@ -129,10 +130,12 @@
         </p>
 
         <div id="expired-cert-container">
-            <button onclick="togglePanelContent('#expired-cert-content')"
+            <button onclick="togglePanelContent('#expired-cert-content', '#expired-cert-toggle')"
+                    id="expired-cert-toggle"
                     class="mdl-button mdl-js-button mdl-button--raised mdl-color--primary mdl-color-text--primary-contrast">
                 Show Expired Certifications
             </button>
+
             <div id="expired-cert-content">
                 <p>
                     <span class="mdl-typography--headline mdl-typography--font-bold">CCNA</span>
