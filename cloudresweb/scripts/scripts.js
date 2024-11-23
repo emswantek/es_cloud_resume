@@ -9,6 +9,11 @@ function toggleDarkMode() {
 
     const toggleButton = document.getElementById('dark-mode-toggle');
 
+    if (!toggleButton) {
+        console.error('Toggle button not found!');
+        return;
+    }
+
     if (toggleButton.textContent === 'Switch to Light Mode') {
         toggleButton.textContent = 'Switch to Dark Mode';
     } else {
@@ -33,43 +38,61 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 
 async function getVisitorCount() {
     try {
-        const visitorSpinner = document.getElementById('visitorSpinner')
-        const visitorBadge = document.getElementById('visitorBadge')
-        const response = await fetch("https://eswebfunctions01.azurewebsites.net/api/http_trigger3?")
+        const visitorSpinner = document.getElementById('visitorSpinner');
+        const visitorBadge = document.getElementById('visitorBadge');
+
+        if (!visitorSpinner || !visitorBadge) {
+            console.error('Visitor spinner or badge not found!');
+            return;
+        }
+
+        const response = await fetch("https://eswebfunctions01.azurewebsites.net/api/http_trigger3?");
 
         if (response.ok) {
-            const jsonData = await response.json()
+            const jsonData = await response.json();
 
-            setVisitorCount(jsonData.count)
-            visitorSpinner.style.display = 'none'
-            visitorBadge.style.display = 'flex'
+            setVisitorCount(jsonData.count);
+            visitorBadge.style.display = 'flex';
         } else {
-            console.error(`Error! Status: ${response.status}`)
-            visitorSpinner.style.display = 'none'
+            console.error(`Error! Status: ${response.status}`);
         }
+
+        visitorSpinner.style.display = 'none';
     } catch (error) {
-        console.error(error);
+        console.error('Failed to fetch visitor count:', error);
     }
 }
 
 function setVisitorCount(count) {
     const visitorCount = document.getElementById('visitorCount');
+    const basePixels = 14
+
+    if (!visitorCount) {
+        console.error('Visitor count element not found!');
+        return;
+    }
+
     visitorCount.textContent = count;
 
     if (count < 1000) {
-        visitorCount.style.fontSize = "16px";
+        visitorCount.style.fontSize = `${basePixels}px`;
     } else if (count < 10000) {
-        visitorCount.style.fontSize = "12px";
+        visitorCount.style.fontSize = `${basePixels - 4}px`;
     } else if (count < 100000) {
-        visitorCount.style.fontSize = "8px";
+        visitorCount.style.fontSize = `${basePixels - 6}px`;
     } else {
-        visitorCount.style.fontSize = "4px"; // pls don't
+        visitorCount.style.fontSize = `${basePixels - 10}px`;
     }
 }
 
 function togglePanelContent(contentSelector, buttonSelector) {
     const content = document.querySelector(contentSelector);
     const button = document.querySelector(buttonSelector);
+
+    if (!content || !button) {
+        console.error('Content or button element not found!');
+        return;
+    }
 
     let buttonText = button.textContent;
 
@@ -79,7 +102,6 @@ function togglePanelContent(contentSelector, buttonSelector) {
     } else {
         content.style.display = 'none';
         buttonText = buttonText.replace('Hide', 'Show');
-
     }
 
     button.textContent = buttonText;
