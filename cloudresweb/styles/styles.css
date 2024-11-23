@@ -19,6 +19,10 @@ p {
     margin-bottom: 10px;
 }
 
+.mdl-button {
+    border-radius: 5px;
+}
+
 .dark-mode {
     background-color: var(--color-dark);
     color: var(--color-light);
