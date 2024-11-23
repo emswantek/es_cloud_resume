@@ -4,21 +4,21 @@
 }
 
 body {
-    /*font-family: 'Roboto', 'Helvetica', sans-serif;*/
-    background-color: var(--color-light);
-    color: var(--color-dark);
+    /* font-family: 'Roboto', 'Helvetica', sans-serif; */
+    background-color: var(--color-light, #f4f4f5);
+    color: var(--color-dark, #18181b);
     box-sizing: border-box;
     margin: 0;
-    padding: 40px;
+    padding: 2.5rem;
     line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    /*margin-bottom: 20px;*/
+    /* margin-bottom: 1.25rem; */
 }
 
 p {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .mdl-button {
@@ -26,8 +26,8 @@ p {
 }
 
 .dark-mode {
-    background-color: var(--color-dark);
-    color: var(--color-light);
+    background-color: var(--color-dark, #18181b);
+    color: var(--color-light, #f4f4f5);
 }
 
 .visitor-container, .panel {
@@ -49,18 +49,18 @@ p {
 }
 
 .mdl-list {
-    padding-left: 40px;
+    padding-left: 2.5rem;
 }
 
 .spaced-text {
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 .spaced-text span {
-    margin: 0 10px;
+    margin: 0 0.625rem;
 }
 
 #expired-cert-content {
     display: none;
-    padding: 15px;
+    padding: 1rem;
 }
