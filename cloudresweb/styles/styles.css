@@ -22,14 +22,19 @@ p {
 }
 
 a:link {
-color: #00AFF5;
+    color: #00AFF5;
 }
+
 a:visited {
-color: #0182b4;
+    color: #0182b4;
 }
 
 .mdl-button {
     border-radius: 5px;
+}
+
+.dark-mode.mdl-button {
+
 }
 
 .dark-mode {
@@ -50,8 +55,7 @@ color: #0182b4;
     width: auto;
 }
 
-.mdl-spinner,
-.mdl-chip {
+.mdl-spinner, .mdl-chip {
     position: absolute;
 }
 
