@@ -1,6 +1,6 @@
 :root {
-    --color-light: #f4f4f5;
-    --color-dark: #18181b;
+    --color-light: rgb(244, 244, 245);
+    --color-dark: rgb(24, 24, 27);
 }
 
 body {
@@ -13,17 +13,9 @@ body {
     line-height: 1.5;
 }
 
-a:link {
-color: #00AFF5;
-}
-a:visited {
-color: #0077a7;
-}
-
-
 h1, h2, h3, h4, h5, h6 {
-    /* margin-bottom: 1.25rem; 
-}*/
+    /* margin-bottom: 1.25rem; */
+}
 
 p {
     margin-bottom: 0.625rem;
