@@ -21,6 +21,13 @@ p {
     margin-bottom: 0.625rem;
 }
 
+a:link {
+color: #00AFF5;
+}
+a:visited {
+color: #0182b4;
+}
+
 .mdl-button {
     border-radius: 5px;
 }
