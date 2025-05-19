@@ -49,6 +49,10 @@ a:visited {
   color: var(--color-dark, #18181b);
 }
 
+.mdl-card__supporting-text {
+    text-align: left;
+}
+
 .dark-mode .mdl-card {
     background-color: var(--color-dark, #18181b);
     color: var(--color-light, #f4f4f5);
