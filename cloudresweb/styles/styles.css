@@ -13,7 +13,12 @@ body {
     line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     /* margin-bottom: 1.25rem; */
 }
 
@@ -33,20 +38,26 @@ a:visited {
     border-radius: 5px;
 }
 
-.dark-mode.mdl-button {
+.flex {
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+}
 
+.flex div {
+    flex-grow: 1;
 }
 
 .mdl-card {
     margin: 40px;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  padding: 0;
-  width: calc(100% - 80px);
-  text-align: center;
-  border: 1px solid #18181b;
-  color: var(--color-dark, #18181b);
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 0;
+    width: calc(100% - 80px);
+    text-align: center;
+    border: 1px solid #18181b;
+    color: var(--color-dark, #18181b);
 }
 
 .mdl-card__supporting-text {
@@ -57,7 +68,7 @@ a:visited {
     background-color: var(--color-dark, #18181b);
     color: var(--color-light, #f4f4f5);
     border: 1px solid #f4f4f5;
-    box-shadow: 0 8px 10px 1px rgba(255, 255, 255, 0.14),0 3px 14px 2px rgba(255,255,255,.12),0 5px 5px -3px rgba(255,255,255,.2)
+    box-shadow: 0 8px 10px 1px rgba(255, 255, 255, 0.14), 0 3px 14px 2px rgba(255, 255, 255, .12), 0 5px 5px -3px rgba(255, 255, 255, .2)
 }
 
 .dark-mode {
@@ -65,7 +76,8 @@ a:visited {
     color: var(--color-light, #f4f4f5);
 }
 
-.visitor-container, .panel {
+.visitor-container,
+.panel {
     position: relative;
     display: flex;
     justify-content: center;
@@ -78,7 +90,8 @@ a:visited {
     width: auto;
 }
 
-.mdl-spinner, .mdl-chip {
+.mdl-spinner,
+.mdl-chip {
     position: absolute;
 }
 
