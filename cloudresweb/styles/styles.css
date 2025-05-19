@@ -19,7 +19,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     margin-bottom: 0.625rem;
-    text-align: center;
 }
 
 a:link {
@@ -34,10 +33,8 @@ a:visited {
     border-radius: 5px;
 }
 
-.dark-mode-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dark-mode.mdl-button {
+
 }
 
 .mdl-card {
@@ -46,22 +43,17 @@ a:visited {
       -ms-flex-positive: 1;
           flex-grow: 1;
   padding: 0;
-  width: calc(100% - 60px);
-  align-content: flex-end;
-  box-sizing: border-box;
-  border: 2px solid #18181b;
+  width: calc(100% - 80px);
+  text-align: center;
+  border: 1px solid #18181b;
   color: var(--color-dark, #18181b);
-}
-
-.mdl-list .mdl-card__supporting-text{
-    text-align: center;
 }
 
 .dark-mode .mdl-card {
     background-color: var(--color-dark, #18181b);
     color: var(--color-light, #f4f4f5);
     border: 1px solid #f4f4f5;
-    box-shadow: 0 8px 10px 1px rgba(255, 255, 255, 0.14),0 3px 14px 2px rgba(255,255,255,.12),0 5px 5px -3px rgba(255,255,255,.2)
+    
 }
 
 .dark-mode {
