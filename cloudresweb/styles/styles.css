@@ -24,6 +24,7 @@ h6 {
 
 p {
     margin-bottom: 0.625rem;
+    height: auto;
 }
 
 a:link {
@@ -38,10 +39,18 @@ a:visited {
     border-radius: 5px;
 }
 
+.card-div {
+    padding: 0 0 0 0;
+}
+
 .flex {
     display: flex;
     flex-direction: row;
     margin: 40px;
+}
+
+.mdl-card__actions {
+
 }
 
 .flex div {
@@ -53,12 +62,13 @@ a:visited {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    padding: 0;
+    padding: 0 0 0 0;
     width: calc(100% - 80px);
-    height: fit-content;
+    height: auto;
     text-align: center;
     border: 1px solid #18181b;
     color: var(--color-dark, #18181b);
+    min-height: min-content;
 }
 
 .mdl-card__supporting-text {
