@@ -49,10 +49,6 @@ a:visited {
     margin: 40px;
 }
 
-.mdl-card__actions {
-
-}
-
 .flex div {
     flex-grow: 1;
 }
@@ -65,14 +61,47 @@ a:visited {
     padding: 0 0 0 0;
     width: calc(100% - 80px);
     height: auto;
-    text-align: center;
     border: 1px solid #18181b;
     color: var(--color-dark, #18181b);
     min-height: min-content;
+    
 }
 
 .mdl-card__supporting-text {
-    text-align: left;
+    text-align: center;
+    align-content: center;
+}
+
+.mdl-card__title-text {
+    color: var(--color-dark, #18181b);
+    text-align: center;
+    align-content: center;
+}
+
+.mdl-card__actions {
+    align-content: center;
+    text-align: center;
+}
+
+.dark-mode .mdl-card__actions #cert-button {
+    align-content: center;
+    text-align: center;
+    color: var(--color-dark, #18181b);
+}
+
+.dark-mode .mdl-card__supporting-text {
+    color: var(--color-light, #f4f4f5);
+    text-align: center;
+}
+
+.dark-mode .mdl-card__title-text {
+    color: var(--color-light, #f4f4f5);
+    text-align: center;
+}
+
+.dark-mode .mdl-card__title {
+    color: var(--color-light, #f4f4f5);
+    text-align: center;
 }
 
 .dark-mode .mdl-card {
