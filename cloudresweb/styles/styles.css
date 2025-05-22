@@ -161,3 +161,20 @@ a:visited {
     min-height: min-content;
     text-align: left;
 }
+
+.title-card {
+    margin: 0px 40px;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 16px;
+    width: calc(100% - 80px);
+    height: auto;
+    color: var(--color-dark, #18181b);
+    min-height: min-content;
+    text-align: center;
+}
+
+.mdl-card__title-card-text {
+    text-align: center;
+}
