@@ -69,6 +69,27 @@ a:visited {
 
 .mdl-card__supporting-text {
     text-align: left;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    color: var(--color-dark, #18181b);
+}
+
+.subtitle-div {
+    padding-bottom 16px;
+}
+
+.mdl-card__subtitle-text {
+    padding-left: 16px;
+}
+
+.dark-mode .mdl-card__subtitle-text {
+    padding-left: 16px;
+    color: var(--color-light, #f4f4f5);
+}
+
+.supporting-div {
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .mdl-card__title-text {
@@ -89,17 +110,18 @@ a:visited {
 
 .dark-mode .mdl-card__supporting-text {
     color: var(--color-light, #f4f4f5);
-    text-align: center;
+    text-align: left;
+    text-sp
 }
 
 .dark-mode .mdl-card__title-text {
     color: var(--color-light, #f4f4f5);
-    text-align: center;
+    text-align: left;
 }
 
 .dark-mode .mdl-card__title {
     color: var(--color-light, #f4f4f5);
-    text-align: center;
+    text-align: left;
 }
 
 .dark-mode .mdl-card {
