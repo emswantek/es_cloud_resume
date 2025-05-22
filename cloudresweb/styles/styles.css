@@ -64,26 +64,24 @@ a:visited {
     border: 1px solid #18181b;
     color: var(--color-dark, #18181b);
     min-height: min-content;
-    
+    align-self: center;
 }
 
 .mdl-card__supporting-text {
-    text-align: center;
-    align-content: center;
+    text-align: left;
 }
 
 .mdl-card__title-text {
     color: var(--color-dark, #18181b);
-    text-align: center;
-    align-content: center;
+    text-align: left;
 }
 
 .mdl-card__actions {
-    align-content: center;
-    text-align: center;
+    align-content: left;
+    text-align: left;
 }
 
-.dark-mode .mdl-card__actions #cert-button {
+.dark-mode .mdl-card__actions .action-button {
     align-content: center;
     text-align: center;
     color: var(--color-dark, #18181b);
@@ -141,6 +139,11 @@ a:visited {
     padding-left: 2.5rem;
 }
 
+.mdl-list__item-primary-content
+.mdl-list__item {
+    align-items: left;
+}
+
 .spaced-text {
     padding: 0.625rem;
 }
@@ -149,6 +152,9 @@ a:visited {
     margin: 0 0.625rem;
 }
 
+#expired-cert-toggle {
+    text-align: center;
+}
 #expired-cert-content {
     display: none;
     padding: 1rem;
