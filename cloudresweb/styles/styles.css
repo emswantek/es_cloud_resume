@@ -66,10 +66,15 @@ a:visited {
 /* top | right | bottom | left */
 .mdl-card__title {
     padding: 16px 16px 8px 16px;
+    display: grid;
 }
 
 .mdl-card__title-card-text {
     text-align: center;
+}
+
+.mdl-card__supporting-text {
+    color: rgba(0, 0, 0, .70);
 }
 
 .mdl-spinner,
