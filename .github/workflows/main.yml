@@ -11,20 +11,25 @@ on:
 
 jobs:
   build:
+    permissions:
+      id-token: write
     runs-on: ubuntu-latest
     steps:
+    - name: Azure CLI Login
     - uses: actions/checkout@v3
-    - uses: azure/login@v1
+    - uses: azure/login@v2
       with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+        client-id: ${{ secrets.AZURE_CLIENT_ID }}
+        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
     
     - name: Upload to blob storage
-      uses: azure/CLI@v1
+      uses: azure/CLI@v2
       with:
         inlineScript: |
             az storage blob upload-batch --account-name escloudresumewebstorage --auth-mode key -d '$web' -s cloudresweb/. --overwrite
     - name: Purge CDN endpoint
-      uses: azure/CLI@v1
+      uses: azure/CLI@v2
       with:
         inlineScript: |
            az cdn endpoint purge --content-paths  "/*" --profile-name "cdn-escloud-1" --name "cdn-escloud-endpoint-1" --resource-group "es_cloud_resume_resources"
