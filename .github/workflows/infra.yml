@@ -76,5 +76,4 @@ jobs:
               --name "gh-${{ github.run_id }}" \
               --resource-group "${{ env.RESOURCE_GROUP }}" \
               --template-file "${{ env.TEMPLATE_FILE }}" \
-              --parameters "@${{ env.PARAM_FILE }}" \
               --mode Incremental
