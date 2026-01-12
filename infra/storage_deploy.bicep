@@ -1,4 +1,4 @@
-//  Storage Account for Cloud Resume Challenge Web Site
+//  Storage Account for Cloud Resume Challenge WebSit
 param storageAccounts_name string = 'escloudresumewebstorage'
 
 resource storageAccounts_resource 'Microsoft.Storage/storageAccounts@2025-01-01' = {
