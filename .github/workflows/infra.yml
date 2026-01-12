@@ -50,7 +50,6 @@ jobs:
             az deployment group what-if \
               --resource-group "${{ env.RESOURCE_GROUP }}" \
               --template-file "${{ env.TEMPLATE_FILE }}" \
-              --parameters "@${{ env.PARAM_FILE }}"
 
   deploy:
     if: github.ref == 'refs/heads/main'
