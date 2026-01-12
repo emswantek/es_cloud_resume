@@ -15,7 +15,6 @@ permissions:
 env:
   RESOURCE_GROUP: es_cloud_resume_resources
   TEMPLATE_FILE: infra/storage_deploy.bicep
-  PARAM_FILE: infra/params.prod.json
 
 concurrency:
   group: infra-prod
